@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<!--
+  ATWOOD & HALE — DIASPORA ACQUISITION DESK
+  Lead-gen landing page for diaspora real estate investment.
+
+  BEFORE LAUNCH, REPLACE THESE PLACEHOLDERS:
+  - WHATSAPP NUMBER: search "234800000000" (international format, no + or leading 0)
+  - EMAIL: search "invest@atwoodandhale.com"
+  - Testimonial names/locations are illustrative — swap for real client quotes before launch
+  - Property counts / "slots this month" figures are placeholders — replace with real numbers
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atwood & Hale | Own Verified Property in Nigeria — From Abroad</title>
+<meta name="description" content="Atwood & Hale helps Nigerians abroad acquire verified land and property in Lagos, Abuja and Ibadan — fully remote, fully documented.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0b0b09;
+    --ink-2:#151310;
+    --paper:#f6f1e7;
+    --paper-dim:#e8e0cf;
+    --gold:#b8923e;
+    --gold-bright:#d4ad5c;
+    --bronze:#7c5e2a;
+    --forest:#20392b;
+    --forest-bright:#2e5540;
+    --line: rgba(246,241,231,0.12);
+    --line-dark: rgba(11,11,9,0.12);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%; display:block;}
+  a{color:inherit;}
+  .wrap{max-width:1120px; margin:0 auto; padding:0 24px;}
+  .eyebrow{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    font-weight:500;
+  }
+  h1,h2,h3{font-family:'Fraunces',serif; font-weight:600; letter-spacing:-0.01em;}
+  .serif-italic{font-style:italic; font-weight:500;}
+
+  /* ---------- NAV ---------- */
+  nav{
+    position:sticky; top:0; z-index:50;
+    background:rgba(11,11,9,0.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  nav .wrap{
+    display:flex; align-items:center; justify-content:space-between;
+    padding-top:16px; padding-bottom:16px;
+    color:var(--paper);
+  }
+  .brand{
+    font-family:'Fraunces',serif; font-size:19px; font-weight:600; letter-spacing:-0.01em;
+    display:flex; align-items:baseline; gap:8px;
+  }
+  .brand small{
+    font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--gold-bright);
+    letter-spacing:0.1em; text-transform:uppercase; font-weight:500;
+  }
+  .nav-cta{
+    background:var(--gold); color:var(--ink);
+    font-family:'Inter',sans-serif; font-weight:600; font-size:14px;
+    padding:10px 20px; border-radius:3px; text-decoration:none;
+    display:inline-flex; align-items:center; gap:8px;
+    transition:background .18s ease;
+  }
+  .nav-cta:hover{background:var(--gold-bright);}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    background:
+      radial-gradient(ellipse 900px 500px at 50% -10%, rgba(184,146,62,0.18), transparent 60%),
+      var(--ink);
+    color:var(--paper);
+    padding:96px 0 88px;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+    border-bottom:1px solid var(--line);
+  }
+  .hero .wrap{position:relative; z-index:2; max-width:820px;}
+  .hero .eyebrow{color:var(--gold-bright); margin-bottom:22px;}
+  .hero h1{
+    font-size:clamp(34px,5.2vw,58px);
+    line-height:1.08;
+    margin-bottom:22px;
+  }
+  .hero h1 em{
+    font-style:italic; font-weight:500; color:var(--gold-bright);
+  }
+  .hero p.sub{
+    font-size:clamp(16px,2vw,19px);
+    color:rgba(246,241,231,0.78);
+    max-width:600px;
+    margin:0 auto 36px;
+  }
+  .hero-ctas{
+    display:flex; flex-wrap:wrap; gap:14px; justify-content:center; margin-bottom:40px;
+  }
+  .btn{
+    font-family:'Inter',sans-serif; font-weight:600; font-size:15px;
+    padding:15px 28px; border-radius:3px; text-decoration:none;
+    display:inline-flex; align-items:center; gap:10px;
+    transition:transform .15s ease, background .15s ease;
+  }
+  .btn:hover{transform:translateY(-1px);}
+  .btn-primary{background:#25D366; color:#0b0b09;}
+  .btn-primary:hover{background:#2fe374;}
+  .btn-secondary{background:transparent; color:var(--paper); border:1px solid rgba(246,241,231,0.35);}
+  .btn-secondary:hover{border-color:var(--gold-bright); color:var(--gold-bright);}
+
+  .trust-row{
+    display:flex; flex-wrap:wrap; justify-content:center; gap:28px;
+    padding-top:32px; border-top:1px solid var(--line);
+  }
+  .trust-item{
+    display:flex; align-items:center; gap:8px;
+    font-family:'IBM Plex Mono',monospace; font-size:11.5px;
+    color:rgba(246,241,231,0.65); letter-spacing:0.04em; text-transform:uppercase;
+  }
+  .trust-item .dot{width:5px; height:5px; border-radius:50%; background:var(--gold-bright);}
+
+  /* seal signature element */
+  .seal{
+    width:132px; height:132px; margin:0 auto 30px;
+    border-radius:50%;
+    border:1.5px solid var(--gold-bright);
+    display:flex; align-items:center; justify-content:center;
+    position:relative;
+    background:radial-gradient(circle at 50% 40%, rgba(184,146,62,0.14), transparent 70%);
+  }
+  .seal::before{
+    content:'';
+    position:absolute; inset:9px;
+    border:1px dashed rgba(212,173,92,0.5);
+    border-radius:50%;
+  }
+  .seal-text{
+    font-family:'IBM Plex Mono',monospace; font-size:9.5px;
+    color:var(--gold-bright); text-align:center; letter-spacing:0.08em;
+    text-transform:uppercase; line-height:1.6;
+  }
+
+  /* ---------- SECTION SCAFFOLDING ---------- */
+  section{padding:88px 0;}
+  .section-dark{background:var(--ink); color:var(--paper);}
+  .section-dark .line{border-color:var(--line);}
+  .kicker{
+    text-align:center; max-width:640px; margin:0 auto 56px;
+  }
+  .kicker .eyebrow{color:var(--bronze); margin-bottom:14px;}
+  .section-dark .kicker .eyebrow{color:var(--gold-bright);}
+  .kicker h2{font-size:clamp(26px,3.6vw,40px); line-height:1.15;}
+
+  /* ---------- PROBLEM ---------- */
+  .problem-grid{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:1px;
+    background:var(--line-dark); border:1px solid var(--line-dark);
+    max-width:960px; margin:0 auto;
+  }
+  .problem-card{
+    background:var(--paper); padding:32px 28px;
+  }
+  .problem-card .num{
+    font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--bronze);
+    letter-spacing:0.1em; margin-bottom:14px; display:block;
+  }
+  .problem-card h3{font-size:18px; margin-bottom:10px; font-weight:600;}
+  .problem-card p{font-size:14.5px; color:#3a352c;}
+
+  /* ---------- MECHANISM ---------- */
+  .mech-steps{
+    max-width:760px; margin:0 auto;
+  }
+  .mech-step{
+    display:grid; grid-template-columns:64px 1fr; gap:24px;
+    padding:28px 0; border-bottom:1px solid var(--line);
+  }
+  .mech-step:last-child{border-bottom:none;}
+  .mech-step .step-mark{
+    font-family:'Fraunces',serif; font-style:italic; font-size:30px;
+    color:var(--gold-bright);
+  }
+  .mech-step h3{font-size:19px; margin-bottom:8px; color:var(--paper);}
+  .mech-step p{font-size:14.5px; color:rgba(246,241,231,0.72);}
+
+  /* ---------- OFFER STACK ---------- */
+  .offer-box{
+    max-width:720px; margin:0 auto;
+    background:var(--ink); color:var(--paper);
+    border:1px solid var(--gold); border-radius:4px;
+    padding:44px 40px;
+  }
+  .offer-box h3{
+    font-size:22px; text-align:center; margin-bottom:6px; color:var(--gold-bright);
+  }
+  .offer-box .offer-sub{
+    text-align:center; font-size:13.5px; color:rgba(246,241,231,0.6);
+    margin-bottom:30px;
+  }
+  .offer-list{list-style:none;}
+  .offer-list li{
+    display:flex; gap:14px; padding:14px 0;
+    border-top:1px solid var(--line);
+    font-size:15px;
+  }
+  .offer-list li:first-child{border-top:none;}
+  .offer-list .check{
+    color:var(--gold-bright); font-family:'IBM Plex Mono',monospace; flex-shrink:0;
+  }
+
+  /* ---------- PROOF ---------- */
+  .proof-grid{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:22px;
+    max-width:1000px; margin:0 auto;
+  }
+  .proof-card{
+    background:var(--paper); border:1px solid var(--line-dark);
+    padding:28px 26px; border-radius:3px;
+  }
+  .proof-card p.quote{font-size:14.5px; margin-bottom:18px; color:#2a261f;}
+  .proof-card .who{
+    font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:var(--bronze);
+    letter-spacing:0.04em;
+  }
+
+  /* ---------- FAQ ---------- */
+  .faq-list{max-width:720px; margin:0 auto;}
+  details{
+    border-bottom:1px solid var(--line-dark); padding:20px 0;
+  }
+  details summary{
+    cursor:pointer; font-weight:600; font-size:16px; list-style:none;
+    display:flex; justify-content:space-between; align-items:center;
+  }
+  details summary::-webkit-details-marker{display:none;}
+  details summary::after{
+    content:'+'; font-family:'Fraunces',serif; font-size:22px; color:var(--gold);
+    margin-left:16px;
+  }
+  details[open] summary::after{content:'–';}
+  details p{margin-top:12px; font-size:14.5px; color:#3a352c; max-width:620px;}
+
+  /* ---------- FORM ---------- */
+  .form-section{background:var(--forest); color:var(--paper);}
+  .form-wrap{
+    max-width:560px; margin:0 auto;
+    background:var(--ink); border:1px solid var(--line);
+    border-radius:4px; padding:44px 38px;
+  }
+  .form-wrap h2{font-size:26px; text-align:center; margin-bottom:8px;}
+  .form-wrap .form-sub{
+    text-align:center; font-size:13.5px; color:rgba(246,241,231,0.62);
+    margin-bottom:32px;
+  }
+  .field{margin-bottom:18px;}
+  .field label{
+    display:block; font-family:'IBM Plex Mono',monospace; font-size:11px;
+    letter-spacing:0.08em; text-transform:uppercase; color:var(--gold-bright);
+    margin-bottom:8px;
+  }
+  .field input, .field select{
+    width:100%; background:var(--ink-2); border:1px solid var(--line);
+    color:var(--paper); font-family:'Inter',sans-serif; font-size:15px;
+    padding:13px 14px; border-radius:3px; outline:none;
+  }
+  .field input:focus, .field select:focus{border-color:var(--gold-bright);}
+  .field-row{display:grid; grid-template-columns:1fr 1fr; gap:14px;}
+  .submit-btn{
+    width:100%; background:var(--gold); color:var(--ink);
+    font-family:'Inter',sans-serif; font-weight:700; font-size:15.5px;
+    padding:16px; border:none; border-radius:3px; cursor:pointer;
+    margin-top:8px; transition:background .15s ease;
+    display:flex; align-items:center; justify-content:center; gap:10px;
+  }
+  .submit-btn:hover{background:var(--gold-bright);}
+  .form-note{
+    text-align:center; font-size:12px; color:rgba(246,241,231,0.5);
+    margin-top:16px;
+  }
+
+  /* ---------- FINAL CTA ---------- */
+  .final-cta{text-align:center;}
+  .final-cta h2{font-size:clamp(26px,3.6vw,38px); max-width:640px; margin:0 auto 16px;}
+  .final-cta p{max-width:520px; margin:0 auto 32px; color:#3a352c;}
+
+  .ps{
+    max-width:640px; margin:56px auto 0; padding-top:32px;
+    border-top:1px solid var(--line-dark);
+    font-size:14px; color:#4a4436;
+  }
+  .ps strong{color:var(--bronze);}
+
+  footer{
+    background:var(--ink); color:rgba(246,241,231,0.5);
+    text-align:center; padding:36px 0; font-size:12.5px;
+    font-family:'IBM Plex Mono',monospace;
+  }
+  footer a{color:var(--gold-bright); text-decoration:none;}
+
+  @media (max-width:760px){
+    .problem-grid{grid-template-columns:1fr;}
+    .proof-grid{grid-template-columns:1fr;}
+    .field-row{grid-template-columns:1fr;}
+    .hero{padding:72px 0 64px;}
+    section{padding:64px 0;}
+    .offer-box, .form-wrap{padding:32px 24px;}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="brand">Atwood &amp; Hale <small>Diaspora Desk</small></div>
+    <a class="nav-cta" href="#form">Get My Shortlist</a>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<header class="hero">
+  <div class="wrap">
+    <div class="seal">
+      <div class="seal-text">Title<br>Verified<br>Estate</div>
+    </div>
+    <p class="eyebrow">For Nigerians Abroad — UK · US · Canada · EU</p>
+    <h1>Own Verified Land or Property Back Home — <em>Without Setting Foot in Nigeria</em></h1>
+    <p class="sub">Atwood &amp; Hale helps Nigerians in the diaspora acquire independently verified real estate in Lagos, Abuja and Ibadan — fully remote, fully documented, no omo-onile drama, no guesswork.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-primary" href="https://wa.me/234800000000?text=Hi%20Atwood%20%26%20Hale%2C%20I%27m%20interested%20in%20the%20Diaspora%20Acquisition%20Desk%20and%20would%20like%20a%20verified%20property%20shortlist." target="_blank" rel="noopener">
+        Chat With Us on WhatsApp
+      </a>
+      <a class="btn btn-secondary" href="#form">Get My Free Shortlist</a>
+    </div>
+    <div class="trust-row">
+      <div class="trust-item"><span class="dot"></span>Independent Title Verification</div>
+      <div class="trust-item"><span class="dot"></span>Live Video Site Walkthroughs</div>
+      <div class="trust-item"><span class="dot"></span>WhatsApp Support, Your Timezone</div>
+    </div>
+  </div>
+</header>
+
+<!-- ================= PROBLEM ================= -->
+<section>
+  <div class="wrap">
+    <div class="kicker">
+      <p class="eyebrow">The Real Risk</p>
+      <h2>Buying land in Nigeria from abroad is where good money goes to disappear.</h2>
+    </div>
+    <div class="problem-grid">
+      <div class="problem-card">
+        <span class="num">01</span>
+        <h3>You can't inspect it yourself</h3>
+        <p>You're relying on a photo, a phone call, and a promise — while the "agent" is standing on land that may not even be for sale.</p>
+      </div>
+      <div class="problem-card">
+        <span class="num">02</span>
+        <h3>Titles get faked or duplicated</h3>
+        <p>The same plot gets sold to three different diaspora buyers, and nobody finds out until it's time to build.</p>
+      </div>
+      <div class="problem-card">
+        <span class="num">03</span>
+        <h3>No one to hold accountable</h3>
+        <p>Family members meant to "supervise" the purchase are managing it around their own schedule, not yours — and rarely with paperwork.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MECHANISM ================= -->
+<section class="section-dark">
+  <div class="wrap">
+    <div class="kicker">
+      <p class="eyebrow">How We Remove the Risk</p>
+      <h2>The Verified Acquisition System</h2>
+    </div>
+    <div class="mech-steps">
+      <div class="mech-step">
+        <span class="step-mark">01</span>
+        <div>
+          <h3>Verification Call &amp; Budget Mapping</h3>
+          <p>A WhatsApp or video call to understand your budget, purpose (personal, rental, resale) and preferred location — scheduled around your timezone, not ours.</p>
+        </div>
+      </div>
+      <div class="mech-step">
+        <span class="step-mark">02</span>
+        <div>
+          <h3>Independent Title &amp; Survey Check</h3>
+          <p>Our team physically visits the site, confirms it against the government land registry, and checks Certificate of Occupancy or Governor's Consent before you spend a naira.</p>
+        </div>
+      </div>
+      <div class="mech-step">
+        <span class="step-mark">03</span>
+        <div>
+          <h3>Live Video Walkthrough</h3>
+          <p>You see the actual plot or property in real time on a video call — boundaries, access road, and neighbourhood — before committing.</p>
+        </div>
+      </div>
+      <div class="mech-step">
+        <span class="step-mark">04</span>
+        <div>
+          <h3>Secure Documentation &amp; Remote Closing</h3>
+          <p>Structured payment stages, digitally signed documentation, and a paper trail you can produce anywhere in the world.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= OFFER ================= -->
+<section>
+  <div class="wrap">
+    <div class="kicker">
+      <p class="eyebrow">What You Get</p>
+      <h2>Everything you need to buy with confidence from abroad</h2>
+    </div>
+    <div class="offer-box">
+      <h3>The Diaspora Acquisition Package</h3>
+      <p class="offer-sub">One dedicated desk, from first call to handover</p>
+      <ul class="offer-list">
+        <li><span class="check">✓</span>Independent title verification report on any property you're considering</li>
+        <li><span class="check">✓</span>Live video site walkthrough &amp; land survey confirmation</li>
+        <li><span class="check">✓</span>Curated shortlist of verified properties matched to your budget</li>
+        <li><span class="check">✓</span>Dedicated relationship manager reachable on WhatsApp in your timezone</li>
+        <li><span class="check">✓</span>Legal documentation support through to registration</li>
+        <li><span class="check">✓</span>Optional post-purchase caretaker &amp; property management</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROOF ================= -->
+<section class="section-dark">
+  <div class="wrap">
+    <div class="kicker">
+      <p class="eyebrow">From Buyers Abroad</p>
+      <h2>Diaspora clients who bought with confidence</h2>
+    </div>
+    <div class="proof-grid">
+      <div class="proof-card">
+        <p class="quote">"I'd been sending money home for two years for a plot that turned out to have three other 'owners.' Atwood &amp; Hale's verification caught a title issue on my next option before I paid a kobo."</p>
+        <div class="who">— Chidi O., London, UK</div>
+      </div>
+      <div class="proof-card">
+        <p class="quote">"The video walkthrough was the difference. I stood on that land through my phone screen before I sent a single transfer. Closed in five weeks from Houston."</p>
+        <div class="who">— Amara N., Houston, USA</div>
+      </div>
+      <div class="proof-card">
+        <p class="quote">"My relationship manager replied on WhatsApp even at 11pm Toronto time. It genuinely felt like someone was on the ground for me."</p>
+        <div class="who">— Tunde A., Toronto, Canada</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section>
+  <div class="wrap">
+    <div class="kicker">
+      <p class="eyebrow">Before You Reach Out</p>
+      <h2>Common questions from diaspora buyers</h2>
+    </div>
+    <div class="faq-list">
+      <details open>
+        <summary>How do I know this isn't another diaspora scam?</summary>
+        <p>Every property we present comes with an independent title verification report and a live video walkthrough — you see the actual land and the actual paperwork before you commit any funds. We verify before we recommend, not after.</p>
+      </details>
+      <details>
+        <summary>What if I can't travel to Nigeria before buying?</summary>
+        <p>Most of our diaspora clients never set foot on the property before closing. Verification, walkthroughs, and documentation are all handled remotely, with you reviewing everything on video calls at a time that suits your timezone.</p>
+      </details>
+      <details>
+        <summary>What documents will I actually receive?</summary>
+        <p>Depending on the property, you'll receive the verified title documentation (Certificate of Occupancy or Governor's Consent), the survey plan, and your registered contract of sale — all provided digitally and couriered where required.</p>
+      </details>
+      <details>
+        <summary>Which locations do you cover?</summary>
+        <p>We currently focus on Lagos, Abuja and Ibadan, where our verification team has direct relationships with the land registries and can physically inspect every property.</p>
+      </details>
+      <details>
+        <summary>Is there a minimum budget?</summary>
+        <p>Tell us your budget on the call — we work across a range of price points and will only shortlist properties that genuinely fit what you have to invest.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FORM ================= -->
+<section class="form-section" id="form">
+  <div class="wrap">
+    <div class="form-wrap">
+      <h2>Get Your Free Verified Shortlist</h2>
+      <p class="form-sub">Tell us where you're investing from and we'll send matched, verified properties directly to your WhatsApp.</p>
+      <form id="diasporaForm">
+        <div class="field">
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" name="fullName" required placeholder="e.g. Adaeze Nwosu">
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required placeholder="you@email.com">
+          </div>
+          <div class="field">
+            <label for="whatsapp">WhatsApp Number</label>
+            <input type="tel" id="whatsapp" name="whatsapp" required placeholder="+44 7000 000000">
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="location">Preferred Location</label>
+            <select id="location" name="location" required>
+              <option value="">Select a location</option>
+              <option>Lagos</option>
+              <option>Abuja</option>
+              <option>Ibadan</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="budget">Investment Budget (USD)</label>
+            <select id="budget" name="budget" required>
+              <option value="">Select a range</option>
+              <option>Under $10,000</option>
+              <option>$10,000 – $30,000</option>
+              <option>$30,000 – $75,000</option>
+              <option>$75,000+</option>
+            </select>
+          </div>
+        </div>
+        <button type="submit" class="submit-btn">Send My Details on WhatsApp →</button>
+        <p class="form-note">We'll open WhatsApp with your details pre-filled — nothing sends until you press send there.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FINAL CTA ================= -->
+<section class="final-cta">
+  <div class="wrap">
+    <h2>Your money already crossed the ocean once to get here. Don't let a fake title send it back for nothing.</h2>
+    <p>We only take on a limited number of new diaspora verifications each month, so our team can physically confirm every title before it reaches your shortlist.</p>
+    <a class="btn btn-primary" href="https://wa.me/234800000000?text=Hi%20Atwood%20%26%20Hale%2C%20I%27d%20like%20to%20start%20my%20verified%20property%20shortlist." target="_blank" rel="noopener">
+      Start on WhatsApp Now
+    </a>
+    <div class="ps">
+      <strong>P.S.</strong> — If a "great deal" lands in your inbox this week, forward it to us before you send anything. We'll tell you, for free, whether the title checks out.
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Atwood &amp; Hale — Diaspora Acquisition Desk · <a href="mailto:invest@atwoodandhale.com">invest@atwoodandhale.com</a>
+  </div>
+</footer>
+
+<script>
+document.getElementById('diasporaForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  const fullName = document.getElementById('fullName').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const whatsapp = document.getElementById('whatsapp').value.trim();
+  const location = document.getElementById('location').value;
+  const budget = document.getElementById('budget').value;
+
+  const message =
+    "Hi Atwood & Hale, I'd like a verified property shortlist.\n\n" +
+    "Name: " + fullName + "\n" +
+    "Email: " + email + "\n" +
+    "WhatsApp: " + whatsapp + "\n" +
+    "Preferred Location: " + location + "\n" +
+    "Budget: " + budget;
+
+  const encoded = encodeURIComponent(message);
+  // TODO: replace 234800000000 with the real WhatsApp Business number
+  window.open("https://wa.me/234800000000?text=" + encoded, "_blank");
+});
+</script>
+
+</body>
+</html>
