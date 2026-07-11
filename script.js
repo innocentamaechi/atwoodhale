@@ -32,8 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   /* 3. Contact form validation + WhatsApp redirect --------------------------- */
   var form = document.getElementById('enquiryForm');
-  if (!form) return;
-
+  if (form) {
   var statusEl = document.getElementById('formStatus');
   var WHATSAPP_NUMBER = '2349065013451'; // Atwood & Hale WhatsApp number, international format, no leading +
 
@@ -155,4 +154,33 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   });
+  } // end if (form)
+
+  /* 4. Portfolio category filter (runs on any page that has a filter bar) ---- */
+  var filterBar = document.querySelector('.filter-bar');
+  if (filterBar) {
+    var filterButtons = filterBar.querySelectorAll('.filter-btn');
+    var portfolioCards = document.querySelectorAll('#portfolioGrid .work-card');
+    var emptyState = document.getElementById('filterEmpty');
+
+    filterBar.addEventListener('click', function (e) {
+      var btn = e.target.closest('.filter-btn');
+      if (!btn) return;
+
+      var selected = btn.getAttribute('data-filter');
+
+      filterButtons.forEach(function (b) {
+        b.setAttribute('aria-pressed', b === btn ? 'true' : 'false');
+      });
+
+      var visibleCount = 0;
+      portfolioCards.forEach(function (card) {
+        var match = selected === 'all' || card.getAttribute('data-category') === selected;
+        card.hidden = !match;
+        if (match) visibleCount++;
+      });
+
+      if (emptyState) emptyState.hidden = visibleCount !== 0;
+    });
+  }
 });

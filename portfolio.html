@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | Atwood & Hale</title>
+  <meta name="description" content="Landing pages, sales funnels, and copywriting projects built by Atwood & Hale — filterable by industry and project type.">
+  <link rel="canonical" href="https://atwoodhale.com/portfolio.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Atwood & Hale">
+  <meta property="og:title" content="Portfolio | Atwood & Hale">
+  <meta property="og:description" content="Landing pages, sales funnels, and copywriting projects built by Atwood & Hale.">
+  <meta property="og:url" content="https://atwoodhale.com/portfolio.html">
+  <meta property="og:image" content="https://atwoodhale.com/og-image.jpg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Portfolio | Atwood & Hale">
+  <meta name="twitter:description" content="Landing pages, sales funnels, and copywriting projects built by Atwood & Hale.">
+  <meta name="twitter:image" content="https://atwoodhale.com/og-image.jpg">
+
+  <link rel="icon" href="./favicon.ico" sizes="any">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,wght@1,500&display=swap" rel="stylesheet">
+
+  <!-- ============================================================
+       AD TRACKING — add IDs before running paid traffic, then
+       uncomment. Keep this identical across every page.
+       ============================================================ -->
+  <!--
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'YOUR_META_PIXEL_ID');
+    fbq('track', 'PageView');
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_GOOGLE_ADS_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'YOUR_GOOGLE_ADS_ID');
+  </script>
+  -->
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a href="./index.html" class="nav__brand" aria-label="Atwood & Hale — Home">
+        <img class="logo-light" src="./logo.png" alt="Atwood & Hale" width="150" height="38">
+        <img class="logo-dark" src="./logo-light.png" alt="Atwood & Hale" width="150" height="38">
+      </a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="./index.html#services">Services</a>
+        <a href="./pricing.html">Pricing</a>
+        <a href="./portfolio.html">Work</a>
+        <a href="./index.html#faq">FAQ</a>
+        <a href="./contact.html">Contact</a>
+      </nav>
+      <div class="nav__cta">
+        <a href="./contact.html" class="btn btn--secondary btn--sm">Free Review</a>
+        <button class="nav__toggle" aria-label="Open menu" aria-expanded="false" id="navToggle">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="section section--tight">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <span class="eyebrow">Portfolio</span>
+          <h1>Work built to <span class="accent">convert</span>, by industry.</h1>
+          <p class="lede" style="margin-inline:auto;">A mix of live projects and representative examples across the industries we build for. Filter by category to see what's relevant to your business.</p>
+        </div>
+
+        <div class="filter-bar" role="group" aria-label="Filter portfolio by category">
+          <button class="filter-btn" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter-btn" data-filter="funnels" aria-pressed="false">Lead-Magnet Funnels</button>
+          <button class="filter-btn" data-filter="real-estate" aria-pressed="false">Real Estate</button>
+          <button class="filter-btn" data-filter="study-abroad" aria-pressed="false">Study Abroad</button>
+          <button class="filter-btn" data-filter="solar" aria-pressed="false">Solar &amp; Home Improvement</button>
+          <button class="filter-btn" data-filter="copywriting" aria-pressed="false">Copywriting Samples</button>
+        </div>
+
+        <p class="filter-empty" id="filterEmpty" hidden>No projects in this category yet — <a class="link" href="./contact.html">tell us about yours</a> and it could be the first.</p>
+
+        <div class="grid grid--auto" id="portfolioGrid">
+
+          <div class="card work-card" data-category="funnels">
+            <span class="card__badge">Live Project</span>
+            <figure><img src="./work-4.jpg" alt="Preview of the Skill-to-Cash AI lead-magnet funnel, a live project" width="800" height="600" loading="lazy"></figure>
+            <span class="work-card__tag">Lead-Magnet Funnel</span>
+            <h3>AI Cash System — Free Guide Funnel</h3>
+            <p>A single-focus opt-in page built to turn attention from a trending story into WhatsApp leads, with one message and one call to action.</p>
+            <a href="https://innocentamaechi.github.io/skill-to-cashl/" class="link" target="_blank" rel="noopener">View Live Project &rarr;</a>
+          </div>
+
+          <div class="card work-card" data-category="copywriting">
+            <span class="card__badge">Live Project</span>
+            <figure><img src="./work-5.jpg" alt="Preview of a long-form direct-response sales page, a live project" width="800" height="600" loading="lazy"></figure>
+            <span class="work-card__tag">Copywriting Sample</span>
+            <h3>Long-Form Digital Product Sales Page</h3>
+            <p>A full direct-response sales page — story-driven hook, structured proof, and a clear offer — built to demonstrate persuasive copywriting on a real digital product, outside our core service verticals.</p>
+            <a href="https://innocentamaechi.github.io/whwmy1/" class="link" target="_blank" rel="noopener">View Live Project &rarr;</a>
+          </div>
+
+          <div class="card work-card" data-category="real-estate">
+            <figure><img src="./work-1.jpg" alt="Placeholder preview for a real estate agency landing page project" width="800" height="600" loading="lazy"></figure>
+            <span class="work-card__tag">Real Estate</span>
+            <h3>Property Enquiry Landing Page</h3>
+            <p>A single-property or agency landing page built to convert listing traffic into booked viewings.</p>
+          </div>
+
+          <div class="card work-card" data-category="study-abroad">
+            <figure><img src="./work-2.jpg" alt="Placeholder preview for a study abroad consultancy funnel project" width="800" height="600" loading="lazy"></figure>
+            <span class="work-card__tag">Study Abroad</span>
+            <h3>Consultation Booking Funnel</h3>
+            <p>A funnel built for immigration and study abroad consultants to turn ad traffic into booked consultations.</p>
+          </div>
+
+          <div class="card work-card" data-category="solar">
+            <figure><img src="./work-3.jpg" alt="Placeholder preview for a solar installation company website project" width="800" height="600" loading="lazy"></figure>
+            <span class="work-card__tag">Solar &amp; Home Improvement</span>
+            <h3>Installation Enquiry Website</h3>
+            <p>A business website for a solar or home improvement company, built to generate qualified site-visit requests.</p>
+          </div>
+
+            <!-- Card 1: Atwood & Hale Diaspora Acquisition Desk -->
+            <div class="card work-card" data-category="real-estate">
+              <span class="card__badge">Live Project</span>
+              <figure><img src="./home-1.png" alt="Preview of the Atwood & Hale Diaspora Acquisition Desk landing page, a live project" width="800" height="600" loading="lazy"></figure>
+              <span class="work-card__tag">Real Estate</span>
+              <h3>Diaspora Acquisition Desk</h3>
+              <p>A lead-generation landing page for Nigerians abroad buying verified land and property in Lagos, Abuja, and Ibadan — built around independent title verification, live video walkthroughs, and a WhatsApp-first enquiry flow.</p>
+              <a href="https://innocentamaechi.github.io/atwoodhale/atwood-hale-diaspora-landing" class="link" target="_blank" rel="noopener">View Live Project &rarr;</a>
+            </div>
+
+            <!-- Card 2: Quanprop Rent-to-Own -->
+            <div class="card work-card" data-category="real-estate">
+              <span class="card__badge">Live Project</span>
+              <figure><img src="./quanprop.png" alt="Preview of the Quanprop rent-to-own homes landing page, a live project" width="800" height="600" loading="lazy"></figure>
+              <span class="work-card__tag">Real Estate</span>
+              <h3>Quanprop — Rent-to-Own Homes</h3>
+              <p>A conversion-focused landing page for a rent-to-own property brand, explaining a monthly-payment ownership model and qualifying leads by budget and city before handing them to WhatsApp.</p>
+              <a href="https://innocentamaechi.github.io/quanprop/" class="link" target="_blank" rel="noopener">View Live Project &rarr;</a>
+            </div>
+
+        </div>
+
+        <p class="portfolio-note">"Live Project" links to a real, working build. Other cards illustrate representative project types for industries we serve — client case studies are added as projects complete.</p>
+      </div>
+    </section>
+
+    <!-- ============================ FINAL CTA ============================ -->
+    <section class="section" id="final-cta">
+      <div class="container">
+        <div class="final-cta">
+          <span class="eyebrow">Ready When You Are</span>
+          <h2>See something close to what you need?</h2>
+          <p>Tell us about your business and get a free, direct review of your current page — plus what a properly built version would do differently.</p>
+          <div class="hero__actions">
+            <a href="./contact.html" class="btn btn--primary">Request a Free Landing Page Review</a>
+            <a href="https://wa.me/2349065013451?text=Hi%20Atwood%20%26%20Hale%2C%20I%20saw%20your%20portfolio%20and%20I%27d%20like%20to%20talk%20about%20my%20project." class="btn btn--secondary" target="_blank" rel="noopener">Chat on WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img class="logo-light" src="./logo.png" alt="Atwood & Hale" width="140" height="35">
+          <img class="logo-dark" src="./logo-light.png" alt="Atwood & Hale" width="140" height="35">
+          <p>Landing pages and sales funnels for service-based businesses ready to convert more of the traffic they already have.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Site</h4>
+          <ul>
+            <li><a href="./index.html#services">Services</a></li>
+            <li><a href="./pricing.html">Pricing</a></li>
+            <li><a href="./portfolio.html">Portfolio</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:hello@atwoodhale.com">hello@atwoodhale.com</a></li>
+            <li><a href="https://wa.me/2349065013451" target="_blank" rel="noopener">WhatsApp</a></li>
+            <li><a href="https://facebook.com/atwoodhale" target="_blank" rel="noopener">Facebook</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span id="year">2026</span> Atwood &amp; Hale. All rights reserved.</span>
+        <span><a href="./privacy-policy.html">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="./terms.html">Terms of Service</a> &nbsp;&middot;&nbsp; <a href="./disclaimer.html">Disclaimer</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>
