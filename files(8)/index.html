@@ -55,25 +55,16 @@
        AD TRACKING — add IDs before running paid traffic, then
        uncomment. Keep this identical across every page.
        ============================================================ -->
-  
-    <!-- Meta Pixel Code -->
-    <script>
-        !function(f,b,e,v,n,t,s)
-        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-        n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t,s)}(window, document,'script',
-        'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '1407724268049550');
-        fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1407724268049550&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Meta Pixel Code -->
   <!--
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'YOUR_META_PIXEL_ID');
+    fbq('track', 'PageView');
+  </script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_GOOGLE_ADS_ID"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -89,7 +80,7 @@
   <!-- ============================ HEADER ============================ -->
   <header class="site-header">
     <div class="container nav">
-      <a href="https://www.atwoodhale.com" class="nav__brand" aria-label="Atwood & Hale — Home">
+      <a href="./index.html" class="nav__brand" aria-label="Atwood & Hale — Home">
         <img class="logo-light" src="./logo.png" alt="Atwood & Hale" width="150" height="38">
         <img class="logo-dark" src="./logo-light.png" alt="Atwood & Hale" width="150" height="38">
       </a>
@@ -113,15 +104,20 @@
 
     <!-- ============================ HERO ============================ -->
     <section class="hero">
+      <div class="hero-decor" aria-hidden="true">
+        <span class="hero-decor__circle hero-decor__circle--1"></span>
+        <span class="hero-decor__circle hero-decor__circle--2"></span>
+        <span class="hero-decor__circle hero-decor__circle--3"></span>
+        <span class="hero-decor__circle hero-decor__circle--4"></span>
+        <span class="hero-decor__circle hero-decor__circle--5"></span>
+      </div>
       <div class="container hero__content hero__content--centered">
         <span class="eyebrow">Landing Pages &amp; Sales Funnels</span>
         <h1>Turn More Visitors Into <span class="accent">Paying Customers</span> With High-Converting Landing Pages &amp; Sales Funnels</h1>
         <p class="lede" style="margin-inline:auto;">Most businesses don't have a traffic problem — they have a conversion problem. We help service-based businesses build professional landing pages that inspire trust, generate qualified enquiries, and support long-term growth.</p>
         <div class="hero__actions hero__actions--centered">
           <a href="./contact.html" class="btn btn--primary">Request a Free Landing Page Review</a>
-          <a href="https://wa.me/2349065013451?text=Hi%20Atwood%20%26%20Hale%2C%20I%27d%20like%20to%20talk%20about%20a%20landing%20page%20for%20my%20business." class="btn btn--whatsapp" target="_blank" rel="noopener">
-            Chat on WhatsApp
-          </a>
+          <a href="./portfolio.html" class="btn btn--secondary">View Portfolio</a>
         </div>
       </div>
 
@@ -400,7 +396,7 @@
           <span class="eyebrow">Latest Work</span>
           <h2>The kind of work built for businesses like yours.</h2>
         </div>
-        <div class="grid grid--2">
+        <div class="work-stack">
           <div class="card work-card">
             <span class="card__badge">Live Project</span>
             <figure><img src="./work-4.jpg" alt="Preview of the Skill-to-Cash AI lead-magnet funnel, a live project" width="800" height="600" loading="lazy"></figure>
@@ -495,7 +491,7 @@
             <a href="./contact.html" class="btn btn--primary">Request a Free Landing Page Review</a>
             <a href="https://wa.me/2349065013451?text=Hi%20Atwood%20%26%20Hale%2C%20I%27d%20like%20to%20talk%20about%20a%20landing%20page%20for%20my%20business." class="btn btn--secondary" target="_blank" rel="noopener">Chat on WhatsApp</a>
           </div>
-          <p style="font-size:0.85rem; color:color-mix(in srgb, var(--color-bg) 65%, transparent); margin-top:var(--space-3);">No obligation. No hard selling. You'll receive practical recommendations tailored to your business, and if you'd like my help implementing them, we can discuss the next steps.</p>
+          <p style="font-size:0.85rem; color:color-mix(in srgb, var(--color-bg) 65%, transparent); margin-top:var(--space-3);">No obligation. No hard selling. Just practical suggestions you can use to improve your landing page — even if you decide not to work with me.</p>
         </div>
       </div>
     </section>

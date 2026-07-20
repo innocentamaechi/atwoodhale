@@ -296,30 +296,42 @@ a.link:hover { color: var(--color-gold-dark); }
   padding-block: var(--space-7) var(--space-6);
   overflow: hidden;
   isolation: isolate;
-  background-image: url('./hero-bg.jpg');
-  background-size: cover;
-  background-position: center;
+  background: var(--color-bg-alt);
 }
-/* Dark scrim so hero text stays legible over any photo. Adjust the two
-   rgba alpha values below if your photo is much lighter/darker overall. */
-.hero::after {
-  content: "";
+/* Soft-circle decoration — original CSS shapes, not a stock image, so there's
+   no licensing risk. Circles share the hero's own background color; the
+   embossed look comes purely from the light/dark shadow pair. */
+.hero-decor {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(11,15,25,0.82) 0%, rgba(11,15,25,0.9) 100%);
-  z-index: -2;
+  z-index: -1;
   pointer-events: none;
 }
-.hero, .hero .eyebrow, .hero h1, .hero p, .hero .hero__trust-item {
-  color: #ffffff;
+.hero-decor__circle {
+  position: absolute;
+  border-radius: 50%;
+  background: var(--color-bg-alt);
+  box-shadow:
+    10px 10px 20px color-mix(in srgb, var(--color-ink) 6%, transparent),
+    -10px -10px 20px color-mix(in srgb, white 90%, transparent);
 }
-.hero p { color: rgba(255,255,255,0.82); }
-.hero .accent { color: var(--color-gold); }
-.hero .hero__trust { border-top-color: rgba(255,255,255,0.15); }
-.hero .btn--secondary { color: #ffffff; border-color: rgba(255,255,255,0.3); }
-.hero .btn--secondary:hover { border-color: #ffffff; }
-/* Ambient background glow — subtle, on-brand (navy/gold), not decorative fluff.
-   Purely visual; safe to delete by removing this ::before rule if not wanted. */
+.hero-decor__circle--1 { width: 220px; height: 220px; top: -60px; left: -40px; }
+.hero-decor__circle--2 { width: 90px;  height: 90px;  top: 18%;   left: 6%; }
+.hero-decor__circle--3 { width: 260px; height: 260px; bottom: -100px; right: -60px; }
+.hero-decor__circle--4 { width: 70px;  height: 70px;  top: 10%;  right: 12%; }
+.hero-decor__circle--5 { width: 46px;  height: 46px;  bottom: 20%; left: 18%; }
+@media (prefers-color-scheme: dark) {
+  .hero-decor__circle {
+    box-shadow: none;
+    border: 1px solid var(--color-border);
+    background: transparent;
+  }
+}
+@media (max-width: 720px) {
+  .hero-decor__circle--3, .hero-decor__circle--4 { display: none; }
+}
+/* Ambient gold glow — subtle, on-brand, layered above the circles. Safe to
+   delete by removing this ::before rule if not wanted. */
 .hero::before {
   content: "";
   position: absolute;
@@ -327,10 +339,9 @@ a.link:hover { color: var(--color-gold-dark); }
   height: 140%;
   background:
     radial-gradient(45% 55% at 18% 20%, color-mix(in srgb, var(--color-gold) 20%, transparent) 0%, transparent 70%),
-    radial-gradient(40% 50% at 85% 10%, color-mix(in srgb, var(--color-gold) 10%, transparent) 0%, transparent 70%);
+    radial-gradient(40% 50% at 85% 10%, color-mix(in srgb, var(--color-ink) 4%, transparent) 0%, transparent 70%);
   z-index: -1;
   pointer-events: none;
-  mix-blend-mode: screen;
 }
 .hero__grid {
   display: grid;
@@ -418,16 +429,6 @@ a.link:hover { color: var(--color-gold-dark); }
 @media (prefers-reduced-motion: reduce) {
   .trust-marquee__group { animation: none; }
   .trust-marquee__track { overflow-x: auto; }
-}
-.hero .trust-marquee {
-  background: rgba(255,255,255,0.06);
-  border-color: rgba(255,255,255,0.15);
-}
-.hero .trust-marquee__label { color: rgba(255,255,255,0.55); }
-.hero .trust-pill {
-  background: rgba(255,255,255,0.08);
-  border-color: rgba(255,255,255,0.2);
-  color: rgba(255,255,255,0.85);
 }
 
 .hero__figure {
@@ -662,21 +663,16 @@ a.link:hover { color: var(--color-gold-dark); }
   position: relative;
   text-align: center;
   border-radius: var(--radius-md);
-  background: var(--color-ink);
+  background: color-mix(in srgb, var(--color-ink) 92%, white 8%);
   padding: var(--space-6) var(--space-4);
   overflow: hidden;
   isolation: isolate;
-  background-image:
-    linear-gradient(180deg, rgba(11,15,25,0.86) 0%, rgba(11,15,25,0.92) 100%),
-    url('./cta-bg.jpg');
-  background-size: cover;
-  background-position: center;
 }
 .final-cta::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(60% 80% at 50% 0%, color-mix(in srgb, var(--color-gold) 16%, transparent) 0%, transparent 70%);
+  background: radial-gradient(60% 80% at 50% 0%, color-mix(in srgb, var(--color-gold) 24%, transparent) 0%, transparent 70%);
   z-index: -1;
   pointer-events: none;
 }
@@ -745,9 +741,12 @@ a.link:hover { color: var(--color-gold-dark); }
 
 /* 12. Footer -------------------------------------------------------------------------- */
 .site-footer {
-  border-top: 1px solid var(--color-border);
+  margin: var(--space-6) var(--space-3) var(--space-3);
   padding-block: var(--space-5) var(--space-4);
   background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
 }
 .footer-grid {
   display: grid;
@@ -825,4 +824,5 @@ a.link:hover { color: var(--color-gold-dark); }
   }
   .section { padding-block: var(--space-6); }
   .section--tight { padding-block: var(--space-4); }
+  .site-footer { margin-inline: var(--space-2); }
 }
